@@ -23,8 +23,12 @@ int main(int argc, char* argv[]) {
 
     inputFile.close();
 
-
     std::ofstream outputFile("out.txt");
+    if (!outputFile) {
+        std::cerr << "Error opening output file." << std::endl;
+        return 1;
+    }
+
     for (size_t i = 0; i < A.size(); i++) {
         outputFile << static_cast<int>(A[i]) << (i < A.size() - 1 ? ' ' : '\n');
     }
