@@ -23,5 +23,13 @@ int main(int argc, char* argv[]) {
 
     inputFile.close();
 
+
+    std::ofstream outputFile("out.txt");
+    for (size_t i = 0; i < A.size(); i++) {
+        outputFile << static_cast<int>(A[i]) << (i < A.size() - 1 ? ' ' : '\n');
+    }
+
+    outputFile.close();
+
     return 0;
 }
