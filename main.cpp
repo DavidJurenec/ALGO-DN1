@@ -3,6 +3,11 @@
 #include <vector>
 #include <cstring>
 
+void countingSort() {
+    std::cout << "Hello";
+}
+
+
 int main(int argc, char* argv[]) {
      if (argc != 2) {
         std::cerr << "Usage: " << argv[0] << " <input file>" << std::endl;
@@ -22,6 +27,10 @@ int main(int argc, char* argv[]) {
     }
 
     inputFile.close();
+
+    for (int k = 0; k < 8; k++) {
+        countingSort();
+    }
 
     std::ofstream outputFile("out.txt");
     if (!outputFile) {
