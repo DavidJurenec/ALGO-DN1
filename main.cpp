@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <cstring>
 
 // Funkcija za branje vhodne datoteke
 bool readFile(const char* filename, std::vector<unsigned char>& A) {
@@ -61,7 +60,6 @@ void countingSort(std::vector<unsigned char>& A, int k) {
     // Kopiranje sortiranih elementov nazaj v originalni vektor A
     A = B;
 }
-
 
 int main(int argc, char* argv[]) {
 
