@@ -3,8 +3,10 @@
 #include <vector>
 #include <cstring>
 
-void countingSort() {
-    std::cout << "Hello";
+
+void countingSort(std::vector<unsigned char>& A, int k) {
+    int C[2] = {0};
+    std::vector<unsigned char> B;
 }
 
 
@@ -29,7 +31,7 @@ int main(int argc, char* argv[]) {
     inputFile.close();
 
     for (int k = 0; k < 8; k++) {
-        countingSort();
+        countingSort(A, k);
     }
 
     std::ofstream outputFile("out.txt");
