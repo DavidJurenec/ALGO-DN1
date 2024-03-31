@@ -7,6 +7,16 @@
 void countingSort(std::vector<unsigned char>& A, int k) {
     int C[2] = {0};
     std::vector<unsigned char> B;
+
+    for (size_t i = 0; i < A.size(); i++) {
+        C[(A[i] >> k) & 1]++;
+    }
+
+    C[1] += C[0];
+
+    for (int i = A.size() - 1; i >= 0; i--) {
+        B[--C[(A[i] >> k) & 1]] = A[i];
+    }
 }
 
 
